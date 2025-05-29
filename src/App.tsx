@@ -6,7 +6,7 @@ import { createXRStore, XR } from '@react-three/xr';
 
 const store = createXRStore()
 
-function App() {
+const App = () => {
    const [red, setRed] = useState(false)
   return (
     <>
