@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { createXRStore, XR } from "@react-three/xr";
-import { VoiceControl, Message } from "./components/VoiceControl/VoiceControl";
 import { XRDisplay } from "./components/XRDisplay";
+import { VoiceControl, Message } from "./components/VoiceControl/VoiceControl";
 
 // Create XR store
 const store = createXRStore();
@@ -32,11 +32,9 @@ export default function App() {
         </button>
       )}
 
-      <VoiceControl onNewMessage={handleNewMessage} />
-
       <Canvas style={styles.canvas}>
         <XR store={store}>
-          <XRDisplay messages={messages} />
+          <XRDisplay messages={messages} onNewMessage={handleNewMessage} />
         </XR>
       </Canvas>
     </div>
@@ -44,31 +42,23 @@ export default function App() {
 }
 
 const styles: { [key: string]: React.CSSProperties } = {
-  appContainer: {
-    width: "100vw",
-    height: "100vh",
-    margin: 0,
-    padding: 0,
-    overflow: "hidden",
+ appContainer: {
     position: "relative",
-    backgroundColor: "#000",
+    width: "100%",
+    height: "100%",
   },
   enterButton: {
     position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    padding: "16px 32px",
-    fontSize: "18px",
-    fontWeight: "bold",
-    backgroundColor: "#1a73e8",
-    color: "#fff",
+    top: "20px",  // Adjust as needed
+    left: "20px", // Adjust as needed
+    zIndex: 20,   // Ensure it is above other elements
+    backgroundColor: "#1976d2",
+    color: "white",
+    padding: "12px 24px",
     border: "none",
-    borderRadius: "8px",
     cursor: "pointer",
-    zIndex: 10,
-    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
-    transition: "background-color 0.3s ease",
+    fontSize: "18px", // Slightly larger font
+    borderRadius: "5px", // Add some rounding for a better look
   },
   canvas: {
     width: "100%",
