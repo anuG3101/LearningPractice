@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Html } from "@react-three/drei";
+import { Html } from "@react-three/drei";
 import { Message } from "./VoiceControl/VoiceControl";
 import { VoiceControl } from "./VoiceControl/VoiceControl";
 
@@ -14,25 +14,16 @@ export function XRDisplay({ messages, onNewMessage }: XRDisplayProps) {
 
   return (
     <>
-
-      <Html position={[0, 0, -3]}>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <Html position={[0, 0.5, -2]} transform occlude>
+        <div style={{ padding: '2rem', fontFamily: 'Arial', backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: '10px' }}>
           <VoiceControl onNewMessage={onNewMessage} />
+          {lastMessage && (
+            <div className="message-response" style={{ marginTop: '1rem', width: '100%' }}>
+              <strong>Assistant:</strong> {lastMessage.content}
+            </div>
+          )}
         </div>
       </Html>
-      {lastMessage && (
-        <Text
-          position={[0, 1.5, -2]}
-          fontSize={0.1}
-          color="white"
-          maxWidth={2}
-          anchorX="center"
-          anchorY="middle"
-        >
-          {lastMessage.content}
-        </Text>
-      )}
-
     </>
   );
 }

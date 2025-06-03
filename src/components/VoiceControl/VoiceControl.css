@@ -1,17 +1,20 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
+
 .voice-form {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 5px;
 }
 
 .voice-form input {
-  width: 300px;  /* Increased width */
-  height: 40px;  /* Increased height */
+  flex: 1;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 0 10px;
-  margin-right: 10px;
-  font-size: 16px; /* Increase font size for better readability */
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1rem;
 }
 
 .mic-button {
@@ -20,26 +23,23 @@
   color: white;
   padding: 10px;
   cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-}
-
-.mic-button.listening {
-  background-color: #f00;
+  font-size: 1.2rem;
+  border-radius: 4px;
 }
 
 .message-log {
-  margin-top: 10px;
+  margin-top: 1rem;
 }
 
 .message {
+  color: #333;
   margin-bottom: 5px;
 }
 
-.message.user {
+.message.user strong {
   color: blue;
 }
 
-.message.assistant {
+.message.assistant strong {
   color: green;
 }
