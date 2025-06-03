@@ -1,20 +1,18 @@
+import React, { useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { createXRStore, XR } from "@react-three/xr";
 import { XRDisplay } from "./components/XRDisplay";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Message, VoiceControl } from "./components/VoiceControl/VoiceControl";
+import { Html } from "@react-three/drei";
 
-function App() {
-  return (
-    <>
-      <h1>XR App</h1>
-      <section className="container">
-        <Router>
-          <Routes>
-            <Route path="/" element={<XRDisplay />} />
-            <Route path="/LearningPractice" element={<XRDisplay />} />
-          </Routes>
-        </Router>
-      </section>
-    </>
-  )
-}
 
-export default App
+
+export default function App() {
+
+
+    return (
+        <>
+           <XRDisplay />
+        </>
+    )
+};
