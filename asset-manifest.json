@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/LearningPractice/static/css/main.068e0a36.css",
-    "main.js": "/LearningPractice/static/js/main.a8ce7f60.js",
+    "main.css": "/LearningPractice/static/css/main.bb4bc95b.css",
+    "main.js": "/LearningPractice/static/js/main.f4b8798f.js",
     "static/js/400.9980275e.chunk.js": "/LearningPractice/static/js/400.9980275e.chunk.js",
     "static/js/453.383954fa.chunk.js": "/LearningPractice/static/js/453.383954fa.chunk.js",
     "static/js/544.ece85db2.chunk.js": "/LearningPractice/static/js/544.ece85db2.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/455.9cdbbe43.chunk.js": "/LearningPractice/static/js/455.9cdbbe43.chunk.js",
     "static/js/127.24867f3e.chunk.js": "/LearningPractice/static/js/127.24867f3e.chunk.js",
     "index.html": "/LearningPractice/index.html",
-    "main.068e0a36.css.map": "/LearningPractice/static/css/main.068e0a36.css.map",
-    "main.a8ce7f60.js.map": "/LearningPractice/static/js/main.a8ce7f60.js.map",
+    "main.bb4bc95b.css.map": "/LearningPractice/static/css/main.bb4bc95b.css.map",
+    "main.f4b8798f.js.map": "/LearningPractice/static/js/main.f4b8798f.js.map",
     "400.9980275e.chunk.js.map": "/LearningPractice/static/js/400.9980275e.chunk.js.map",
     "453.383954fa.chunk.js.map": "/LearningPractice/static/js/453.383954fa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.068e0a36.css",
-    "static/js/main.a8ce7f60.js"
+    "static/css/main.bb4bc95b.css",
+    "static/js/main.f4b8798f.js"
   ]
 }
