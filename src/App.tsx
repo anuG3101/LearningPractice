@@ -9,7 +9,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<XRDisplay />} />
-            <Route path="/LearningPractice/XrDisplay" element={<XRDisplay />} />
+            <Route path="/LearningPractice" element={<XRDisplay />} />
           </Routes>
         </Router>
       </section>
