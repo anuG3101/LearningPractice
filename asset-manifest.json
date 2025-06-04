@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/LearningPractice/static/css/main.665c398d.css",
-    "main.js": "/LearningPractice/static/js/main.a0f124ae.js",
+    "main.js": "/LearningPractice/static/js/main.48fb607a.js",
     "static/js/9400.dafe6554.chunk.js": "/LearningPractice/static/js/9400.dafe6554.chunk.js",
     "static/js/3497.d49ead75.chunk.js": "/LearningPractice/static/js/3497.d49ead75.chunk.js",
     "static/js/700.689abae8.chunk.js": "/LearningPractice/static/js/700.689abae8.chunk.js",
@@ -131,7 +131,7 @@
     "static/media/sisan03.woff2": "/LearningPractice/static/media/sisan03.e083757dd9a557797cea.woff2",
     "index.html": "/LearningPractice/index.html",
     "main.665c398d.css.map": "/LearningPractice/static/css/main.665c398d.css.map",
-    "main.a0f124ae.js.map": "/LearningPractice/static/js/main.a0f124ae.js.map",
+    "main.48fb607a.js.map": "/LearningPractice/static/js/main.48fb607a.js.map",
     "9400.dafe6554.chunk.js.map": "/LearningPractice/static/js/9400.dafe6554.chunk.js.map",
     "3497.d49ead75.chunk.js.map": "/LearningPractice/static/js/3497.d49ead75.chunk.js.map",
     "700.689abae8.chunk.js.map": "/LearningPractice/static/js/700.689abae8.chunk.js.map",
@@ -241,6 +241,6 @@
   },
   "entrypoints": [
     "static/css/main.665c398d.css",
-    "static/js/main.a0f124ae.js"
+    "static/js/main.48fb607a.js"
   ]
 }
