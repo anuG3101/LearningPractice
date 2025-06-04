@@ -4,6 +4,7 @@ import { Message } from "./VoiceControl/VoiceControl";
 import { VoiceControl } from "./VoiceControl/VoiceControl";
 import { Canvas } from "@react-three/fiber";
 import { createXRStore, XR, XRDomOverlay } from "@react-three/xr";
+import { IxButton, IxIconButton } from '@siemens/ix-react';
 
 
 const store = createXRStore();
@@ -15,18 +16,13 @@ export function XRDisplay() {
   const handleNewMessage = (msg: Message) => {
     setMessages((prev) => [...prev, msg]);
   };
-  const handleEnterAR = async () => {
-    try {
-      await store.enterAR();
-      setARStarted(true);
-    } catch (err) {
-      console.warn("Failed to enter AR mode:", err);
-    }
-  };
+
 
   return (
-    <>
-      <button onClick={() => store.enterAR()}>Enter AR</button>
+     <>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', paddingTop: '24px', position: 'relative', zIndex: 20 }}>
+        <IxButton style={{fontSize: '12px', height:'23px'}} onClick={() => store.enterAR()}>Enter AR</IxButton>
+      </div>
       <Canvas>
         <XR store={store}>
           <ambientLight intensity={1} />
@@ -34,7 +30,6 @@ export function XRDisplay() {
             <div style={{ padding: '2rem', fontFamily: 'Arial', backgroundColor: 'rgba(255, 255, 255, 0.8)', borderRadius: '10px', zIndex:10 }}>
               <VoiceControl onNewMessage={handleNewMessage} />
             </div>
-
           </XRDomOverlay>
         </XR>
       </Canvas>

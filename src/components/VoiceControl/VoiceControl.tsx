@@ -45,26 +45,47 @@ export function VoiceControl({ onNewMessage }: VoiceControlProps) {
       setUserMessage(userMsg);
       setAssistantMessage(null);
       onNewMessage?.(userMsg);
+      const endPoint = process.env.AZURE_OPENAI_ENDPOINT;
+
+      const endpoint =  "https://openai-difactr-swedencentral-1.openai.azure.com";
+      const api_key = "e324209380064753ac9eae7b0c3bec51";
+      const deployment = "gpt-4o";
+      const api_version ="2024-05-01-preview";
+
+
+      const url = "https://openai-difactr-swedencentral-1.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-05-01-preview";  
+      //const url = "http://127.0.0.1:5000/generate";  
+
+
 
       try {
-        const res = await fetch("https://api.openai.com/v1/chat/completions", {
+        const res = await fetch(url, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer YOUR_OPENAI_API_KEY`,
+             "api-key": api_key
           },
           body: JSON.stringify({
-            model: "gpt-4o-mini",
+            model: deployment,
             messages: [
               { role: "system", content: "You are a helpful assistant." },
               { role: "user", content: question },
             ],
-            max_tokens: 100,
-            temperature: 0.7,
           }),
         });
 
+        // const res = await fetch(url, {
+        //   method: "POST",
+        //   headers: {
+        //     "Content-Type": "application/json",
+        //   },
+        //   body: JSON.stringify({
+        //     prompt: question
+        //   }),
+        // });
+
         const data = await res.json();
+        // const answer = data?.response || "Sorry, no answer.";
         const answer = data.choices?.[0]?.message?.content || "Sorry, no answer.";
         const assistantMsg: Message = { role: "assistant", content: answer };
 

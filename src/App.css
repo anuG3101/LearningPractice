@@ -7,19 +7,3 @@
   text-align: center;
 }
 
-.container {
-  width: 800px; /* Fixed width */
-  height: 50vh;
-  
-  margin: 0 auto; /* Center horizontally */
-  display: flex; /* Optional: Flexbox for child alignment */
-  flex-direction: column; /* Optional: Align children vertically */
-  justify-content: center; /* Optional: Center children vertically */
-  align-items: center; /* Optional: Center children horizontally */
-  border: 1px solid #ccc; /* Optional: Add a border for visibility */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
-}
-
-button{
-  margin: 10px;
-}
